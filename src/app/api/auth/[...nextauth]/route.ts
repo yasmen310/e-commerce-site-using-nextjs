@@ -1,5 +1,3 @@
-// pages/api/auth/[...nextauth].ts
-
 import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import FacebookProvider from "next-auth/providers/facebook";
@@ -23,7 +21,7 @@ export const authOptions: NextAuthOptions = {
     async redirect({ url, baseUrl }) {
     
       if (url === baseUrl || url.includes("/auth/signin")) {
-        return `${baseUrl}/wishlist`; 
+        return `${baseUrl}/cart`; 
       }
       return baseUrl; 
     },
